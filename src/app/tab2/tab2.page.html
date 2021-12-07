@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Galeria de Fotos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--muestro fotos caputradas-->
+  <ion-grid>
+    <ion-row>
+      <ion-col size='6'
+        *ngFor="let foto of fotoService.fotos; index as position">
+        <ion-img [src]="foto.webviewPath"></ion-img>     
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--boton para activar la camara-->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <!--llamo a la funcion addPhotoGallery-->
+    <ion-fab-button (click)="addPhotoToGallery()">
+      <!--icono de camara-->
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+
+
+  </ion-fab>
+</ion-content>
+ 

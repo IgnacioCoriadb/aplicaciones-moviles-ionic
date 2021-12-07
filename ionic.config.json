@@ -1,0 +1,7 @@
+{
+  "name": "final-aplicaciones-moviles",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
